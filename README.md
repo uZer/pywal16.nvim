@@ -1,4 +1,4 @@
-# pywal.nvim
+# pywal.nvim with transparent background support
 
 Pywal.nvim is a reimplementation of [pywal.vim](https://github.com/dylanaraps/wal.vim)
 wrote totally in lua, with support for a few nvim lua plugins

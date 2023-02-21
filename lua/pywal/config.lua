@@ -3,9 +3,9 @@ local M = {}
 M.highlights_base = function (colors)
   return {
     Normal = { fg = colors.foreground, bg = colors.background },
-    StatusLineNC = { bg = colors.background, fg = colors.background },
-    StatusLine = { bg = colors.background, fg = colors.background },
-    SignColumn = { bg = colors.background, fg = colors.background },
+    StatusLineNC = { fg = colors.background, bg = colors.background },
+    StatusLine = { fg = colors.background, bg = colors.background },
+    SignColumn = { fg = colors.background, bg = colors.background },
     MsgArea = { fg = colors.foreground, bg = colors.background },
     ModeMsg = { fg = colors.foreground, bg = colors.background },
     MsgSeparator = { fg = colors.foreground, bg = colors.background },
@@ -29,7 +29,7 @@ M.highlights_base = function (colors)
     CursorColumn = { bg = colors.background },
     ColorColumn = { bg = colors.background },
     NormalFloat = { bg = colors.background },
-    Visual = { bg = colors.color1, fg = colors.foreground },
+    Visual = { fg = colors.foreground, bg = colors.color1 },
     VisualNOS = { bg = colors.background },
     WarningMsg = { fg = colors.color3, bg = colors.background },
     DiffAdd = { fg = colors.background, bg = colors.color4 },
