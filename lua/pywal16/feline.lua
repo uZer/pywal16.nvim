@@ -26,7 +26,7 @@ local assets = {
 	slim_dot = '•',
 }
 
-local colors = require('pywal.core').get_colors()
+local colors = require('pywal16.core').get_colors()
 
 -- settings
 local sett = {

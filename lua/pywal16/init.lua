@@ -1,6 +1,6 @@
 local M = {}
-local core = require('pywal.core')
-local highlights = require('pywal.highlights')
+local core = require('pywal16.core')
+local highlights = require('pywal16.highlights')
 
 function M.setup ()
   local colors = core.get_colors()
