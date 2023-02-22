@@ -2,60 +2,60 @@ local M = {}
 
 M.highlights_base = function (colors)
   return {
-    Normal = { fg = colors.foreground, bg = colors.background },
-    StatusLineNC = { fg = colors.background, bg = colors.background },
-    StatusLine = { fg = colors.background, bg = colors.background },
-    SignColumn = { fg = colors.background, bg = colors.background },
-    MsgArea = { fg = colors.foreground, bg = colors.background },
-    ModeMsg = { fg = colors.foreground, bg = colors.background },
-    MsgSeparator = { fg = colors.foreground, bg = colors.background },
+    Normal = { fg = colors.foreground, bg = colors.transparent },
+    StatusLineNC = { fg = colors.transparent, bg = colors.transparent },
+    StatusLine = { fg = colors.transparent, bg = colors.transparent },
+    SignColumn = { fg = colors.transparent, bg = colors.transparent },
+    MsgArea = { fg = colors.foreground, bg = colors.transparent },
+    ModeMsg = { fg = colors.foreground, bg = colors.transparent },
+    MsgSeparator = { fg = colors.foreground, bg = colors.transparent },
     SpellBad = { fg = colors.color2 },
     SpellCap = { fg = colors.color6 },
     SpellLocal = { fg = colors.color4 },
     SpellRare = { fg = colors.color6 },
-    NormalNC = { fg = colors.foreground, bg = colors.background },
-    Pmenu = { fg = colors.foreground, bg = colors.background },
-    PmenuSel = { fg = colors.background, bg = colors.color4 },
+    NormalNC = { fg = colors.foreground, bg = colors.transparent },
+    Pmenu = { fg = colors.foreground, bg = colors.transparent },
+    PmenuSel = { fg = colors.transparent, bg = colors.color4 },
     WildMenu = { fg = colors.color7, bg = colors.color4 },
     CursorLineNr = { fg = colors.color1 },
     Comment = { fg = colors.color1 },
-    Folded = { fg = colors.color4, bg = colors.background },
-    FoldColumn = { fg = colors.color4, bg = colors.background },
-    LineNr = { fg = colors.color9, bg = colors.background },
-    FloatBorder = { fg = colors.foreground, bg = colors.background },
+    Folded = { fg = colors.color4, bg = colors.transparent },
+    FoldColumn = { fg = colors.color4, bg = colors.transparent },
+    LineNr = { fg = colors.color9, bg = colors.transparent },
+    FloatBorder = { fg = colors.foreground, bg = colors.transparent },
     Whitespace = { fg = colors.color1 },
-    VertSplit = { fg = colors.background, bg = colors.color1 },
-    CursorLine = { bg = colors.background },
-    CursorColumn = { bg = colors.background },
-    ColorColumn = { bg = colors.background },
-    NormalFloat = { bg = colors.background },
+    VertSplit = { fg = colors.transparent, bg = colors.transparent },
+    CursorLine = { bg = colors.transparent },
+    CursorColumn = { bg = colors.transparent },
+    ColorColumn = { bg = colors.transparent },
+    NormalFloat = { fg = colors.foreground,  bg = colors.background },
     Visual = { fg = colors.foreground, bg = colors.color1 },
-    VisualNOS = { bg = colors.background },
-    WarningMsg = { fg = colors.color3, bg = colors.background },
-    DiffAdd = { fg = colors.background, bg = colors.color4 },
-    DiffChange = { fg = colors.background, bg = colors.color5 },
-    DiffDelete = { fg = colors.background, bg = colors.color11 },
+    VisualNOS = { bg = colors.transparent },
+    WarningMsg = { fg = colors.color3, bg = colors.transparent },
+    DiffAdd = { fg = colors.transparent, bg = colors.color4 },
+    DiffChange = { fg = colors.transparent, bg = colors.color5 },
+    DiffDelete = { fg = colors.transparent, bg = colors.color11 },
     QuickFixLine = { bg = colors.color2 },
-    PmenuSbar = { bg = colors.background },
+    PmenuSbar = { bg = colors.transparent },
     PmenuThumb = { bg = colors.color2 },
-    MatchParen = { fg = colors.color4, bg = colors.background },
+    MatchParen = { fg = colors.color4, bg = colors.transparent },
     Cursor = { fg = colors.foreground, bg = colors.cursor },
     lCursor = { fg = colors.foreground, bg = colors.cursor },
     CursorIM = { fg = colors.foreground, bg = colors.cursor },
     TermCursor = { fg = colors.foreground, bg = colors.cursor },
     TermCursorNC = { fg = colors.foreground, bg = colors.cursor },
-    Conceal = { fg = colors.color4, bg = colors.background },
+    Conceal = { fg = colors.color4, bg = colors.transparent },
     Directory = { fg = colors.color4 },
     SpecialKey = { fg = colors.color4 },
     Title = { fg = colors.color4 },
-    ErrorMsg = { fg = colors.color11, bg = colors.background },
+    ErrorMsg = { fg = colors.color11, bg = colors.transparent },
     Search = { fg = colors.foreground, bg = colors.color1 },
     IncSearch = { fg = colors.foreground, bg = colors.color1 },
     Substitute = { fg = colors.color1, bg = colors.color6 },
     MoreMsg = { fg = colors.color5 },
     Question = { fg = colors.color5 },
-    EndOfBuffer = { fg = colors.background },
-    NonText = { fg = colors.color1 },
+    EndOfBuffer = { fg = colors.background, bg = colors.transparent },
+    NonText = { fg = colors.background, bg = colors.background },
     Variable = { fg = colors.color5 },
     String = { fg = colors.color12 },
     Character = { fg = colors.color12 },
@@ -87,19 +87,19 @@ M.highlights_base = function (colors)
     Debug = { fg = colors.color11 },
     Delimiter = { fg = colors.foreground },
     SpecialComment = { fg = colors.color2 },
-    Ignore = { fg = colors.color7, bg = colors.background },
-    Todo = { fg = colors.color11, bg = colors.background },
-    Error = { fg = colors.color11, bg = colors.background },
-    TabLine = { fg = colors.color2, bg = colors.background },
-    TabLineSel = { fg = colors.foreground, bg = colors.background },
-    TabLineFill = { fg = colors.foreground, bg = colors.background },
-    CmpDocumentationBorder = { fg = colors.foreground, bg = colors.background },
-    CmpItemAbbr = { fg = colors.foreground, bg = colors.background },
-    CmpItemAbbrDeprecated = { fg = colors.color2, bg = colors.background },
-    CmpItemAbbrMatch = { fg = colors.color7, bg = colors.background },
-    CmpItemAbbrMatchFuzzy = { fg = colors.color7, bg = colors.background },
-    CmpItemKind = { fg = colors.color4, bg = colors.background },
-    CmpItemMenu = { fg = colors.color2, bg = colors.background },
+    Ignore = { fg = colors.color7, bg = colors.transparent },
+    Todo = { fg = colors.color11, bg = colors.transparent },
+    Error = { fg = colors.color11, bg = colors.transparent },
+    -- TabLine = { fg = colors.color4, bg = colors.background },
+    -- TabLineSel = { fg = colors.foreground, bg = colors.background },
+    TabLineFill = { fg = colors.color4, bg = colors.transparent },
+    CmpDocumentationBorder = { fg = colors.foreground, bg = colors.transparent },
+    CmpItemAbbr = { fg = colors.foreground, bg = colors.transparent },
+    CmpItemAbbrDeprecated = { fg = colors.color2, bg = colors.transparent },
+    CmpItemAbbrMatch = { fg = colors.color7, bg = colors.transparent },
+    CmpItemAbbrMatchFuzzy = { fg = colors.color7, bg = colors.transparent },
+    CmpItemKind = { fg = colors.color4, bg = colors.transparent },
+    CmpItemMenu = { fg = colors.color2, bg = colors.transparent },
 
     -- treesitter
 
@@ -114,10 +114,10 @@ M.highlights_base = function (colors)
     -- TSBoolean           = { };    -- For booleans.
     -- TSCharacter         = { };    -- For characters.
     -- TSComment           = { };    -- For color1 blocks.
-    TSNote = { fg = colors.background, bg = colors.color5 },
+    TSNote = { fg = colors.transparent, bg = colors.color5 },
     TSComment = { fg = colors.color1 },
-    TSWarning = { fg = colors.background, bg = colors.color5 },
-    TSDanger = { fg = colors.background, bg = colors.color3 },
+    TSWarning = { fg = colors.transparent, bg = colors.color5 },
+    TSDanger = { fg = colors.transparent, bg = colors.color3 },
     TSConstructor = { fg = colors.color6 }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
     -- TSConditional       = { };    -- For keywords related to conditionnals.
     -- TSConstant          = { };    -- For constants
@@ -168,7 +168,7 @@ M.highlights_base = function (colors)
     -- LspTrouble
     LspTroubleText = { fg = colors.foreground },
     LspTroubleCount = { fg = colors.color6, bg = colors.foreground },
-    LspTroubleNormal = { fg = colors.foreground, bg = colors.background },
+    LspTroubleNormal = { fg = colors.foreground, bg = colors.transparent },
 
     -- Illuminate
     illuminatedWord = { bg = colors.foreground },
@@ -187,9 +187,9 @@ M.highlights_base = function (colors)
    -- Neogit
     NeogitBranch = { fg = colors.color6 },
     NeogitRemote = { fg = colors.color6 },
-    NeogitHunkHeader = { bg = colors.background, fg = colors.foreground },
+    NeogitHunkHeader = { bg = colors.transparent, fg = colors.foreground },
     NeogitHunkHeaderHighlight = { bg = colors.foreground, fg = colors.color7 },
-    NeogitDiffContextHighlight = { bg = colors.background, fg = colors.foreground },
+    NeogitDiffContextHighlight = { bg = colors.transparent, fg = colors.foreground },
     NeogitDiffDeleteHighlight = { fg = colors.color11, bg = colors.color11 },
     NeogitDiffAddHighlight = { fg = colors.color4, bg = colors.color4 },
 
@@ -202,18 +202,19 @@ M.highlights_base = function (colors)
     GitSignsAdd = { fg = colors.color4 }, -- diff mode: Added line |diff.txt|
     GitSignsChange = { fg = colors.color5 }, -- diff mode: Changed line |diff.txt|
     GitSignsDelete = { fg = colors.color11 }, -- diff mode: Deleted line |diff.txt|
+    GitSignsCurrentLineBlame = { fg = colors.color1, bg = colors.background },
 
     -- Telescope
-    TelescopeBorder = { fg = colors.color1, bg = colors.background },
-    TelescopeNormal = { fg = colors.foreground, bg = colors.background },
-    TelescopeSelection = { fg = colors.background, bg = colors.color1 },
+    TelescopeBorder = { fg = colors.color1, bg = colors.transparent },
+    TelescopeNormal = { fg = colors.foreground, bg = colors.transparent },
+    TelescopeSelection = { fg = colors.transparent, bg = colors.color1 },
 
     -- Indent Blank Line
-    IndentBlanklineChar = { fg = colors.color1, bg = colors.background },
+    IndentBlanklineChar = { fg = colors.color1, bg = colors.transparent },
 
     -- NvimTree
-    NvimTreeNormal = { fg = colors.foreground, bg = colors.background },
-    NvimTreeNormalNC = { fg = colors.foreground, bg = colors.background },
+    NvimTreeNormal = { fg = colors.foreground, bg = colors.transparent },
+    NvimTreeNormalNC = { fg = colors.foreground, bg = colors.transparent },
     NvimTreeRootFolder = { fg = colors.color1 },
     NvimTreeGitDirty = { fg = colors.color5 },
     NvimTreeGitNew = { fg = colors.color4 },
@@ -222,11 +223,11 @@ M.highlights_base = function (colors)
     NvimTreeIndentMarker = { fg = colors.foreground },
     NvimTreeImageFile = { fg = colors.foreground },
     NvimTreeSymlink = { fg = colors.color7 },
-    NvimTreeFolderIcon = { fg = colors.color2, bg = colors.background },
-    NvimTreeStatusLineNC = { bg = colors.background, fg = colors.background },
+    NvimTreeFolderIcon = { fg = colors.color2, bg = colors.transparent },
+    NvimTreeStatusLineNC = { bg = colors.transparent, fg = colors.transparent },
 
     -- LspSaga
-    LspFloatWinNormal = { bg = colors.background },
+    LspFloatWinNormal = { bg = colors.transparent },
     LspFloatWinBorder = { fg = colors.foreground },
     LspSagaBorderTitle = { fg = colors.color7 },
     LspSagaHoverBorder = { fg = colors.color7 },
@@ -250,7 +251,7 @@ M.highlights_base = function (colors)
 
     -- BufferLine
     BufferLineIndicatorSelected = { fg = colors.color5 },
-    BufferLineFill = { bg = colors.background },
+    BufferLineFill = { bg = colors.transparent },
   }
 end
 
