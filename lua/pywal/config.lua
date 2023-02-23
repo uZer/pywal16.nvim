@@ -23,11 +23,11 @@ M.highlights_base = function (colors)
     FoldColumn = { fg = colors.color4, bg = colors.transparent },
     LineNr = { fg = colors.color9, bg = colors.transparent },
     FloatBorder = { fg = colors.foreground, bg = colors.transparent },
-    Whitespace = { fg = colors.color1 },
+    Whitespace = { fg = colors.color1, bg = colors.color2 },
     VertSplit = { fg = colors.transparent, bg = colors.transparent },
     CursorLine = { bg = colors.transparent },
     CursorColumn = { bg = colors.transparent },
-    ColorColumn = { bg = colors.transparent },
+    ColorColumn = { bg = colors.background },
     NormalFloat = { fg = colors.foreground,  bg = colors.background },
     Visual = { fg = colors.foreground, bg = colors.color1 },
     VisualNOS = { bg = colors.transparent },
@@ -252,6 +252,9 @@ M.highlights_base = function (colors)
     -- BufferLine
     BufferLineIndicatorSelected = { fg = colors.color5 },
     BufferLineFill = { bg = colors.transparent },
+
+    --BetterWhitespace
+    ExtraWhitespace = { bg = colors.color9 },
   }
 end
 
