@@ -255,6 +255,10 @@ M.highlights_base = function (colors)
 
     --BetterWhitespace
     ExtraWhitespace = { bg = colors.color9 },
+
+    -- nvim-scrollbar
+    ScrollbarHandle = { bg = colors.color1 },
+    ScrollbarCursorHandle = { bg = colors.color4 },
   }
 end
 
