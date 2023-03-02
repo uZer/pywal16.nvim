@@ -18,17 +18,17 @@ M.highlights_base = function (colors)
     PmenuSel = { fg = colors.transparent, bg = colors.color4 },
     WildMenu = { fg = colors.color7, bg = colors.color4 },
     CursorLineNr = { fg = colors.color1 },
-    Comment = { fg = colors.color1 },
+    Comment = { fg = colors.color10 },
     Folded = { fg = colors.color4, bg = colors.transparent },
     FoldColumn = { fg = colors.color4, bg = colors.transparent },
-    LineNr = { fg = colors.color9, bg = colors.transparent },
+    LineNr = { fg = colors.color12, bg = colors.transparent },
     FloatBorder = { fg = colors.foreground, bg = colors.transparent },
     Whitespace = { fg = colors.color1, bg = colors.color2 },
     VertSplit = { fg = colors.color4, bg = colors.transparent },
     CursorLine = { bg = colors.transparent },
     CursorColumn = { bg = colors.transparent },
     ColorColumn = { bg = colors.background },
-    NormalFloat = { fg = colors.foreground,  bg = colors.color1 },
+    NormalFloat = { fg = colors.foreground,  bg = colors.background },
     Visual = { fg = colors.foreground, bg = colors.color1 },
     VisualNOS = { bg = colors.transparent },
     WarningMsg = { fg = colors.color3, bg = colors.transparent },
@@ -115,7 +115,7 @@ M.highlights_base = function (colors)
     -- TSCharacter         = { };    -- For characters.
     -- TSComment           = { };    -- For color1 blocks.
     TSNote = { fg = colors.transparent, bg = colors.color5 },
-    TSComment = { fg = colors.color1 },
+    TSComment = { fg = colors.color8 },
     TSWarning = { fg = colors.transparent, bg = colors.color5 },
     TSDanger = { fg = colors.transparent, bg = colors.color3 },
     TSConstructor = { fg = colors.color6 }, -- For constructor calls and definitions: `= { }` in Lua, and Java constructors.
@@ -202,7 +202,7 @@ M.highlights_base = function (colors)
     GitSignsAdd = { fg = colors.color4 }, -- diff mode: Added line |diff.txt|
     GitSignsChange = { fg = colors.color5 }, -- diff mode: Changed line |diff.txt|
     GitSignsDelete = { fg = colors.color11 }, -- diff mode: Deleted line |diff.txt|
-    GitSignsCurrentLineBlame = { fg = colors.color1, bg = colors.background },
+    GitSignsCurrentLineBlame = { fg = colors.color11, bg = colors.background },
 
     -- Telescope
     TelescopeBorder = { fg = colors.color1, bg = colors.transparent },
@@ -215,7 +215,7 @@ M.highlights_base = function (colors)
     -- NvimTree
     NvimTreeNormal = { fg = colors.foreground, bg = colors.transparent },
     NvimTreeNormalNC = { fg = colors.foreground, bg = colors.transparent },
-    NvimTreeRootFolder = { fg = colors.color1 },
+    NvimTreeRootFolder = { fg = colors.color6 },
     NvimTreeGitDirty = { fg = colors.color5 },
     NvimTreeGitNew = { fg = colors.color4 },
     NvimTreeGitDeleted = { fg = colors.color11 },
@@ -257,8 +257,8 @@ M.highlights_base = function (colors)
     ExtraWhitespace = { bg = colors.color9 },
 
     -- nvim-scrollbar
-    ScrollbarHandle = { bg = colors.color1 },
-    ScrollbarCursorHandle = { bg = colors.color4 },
+    ScrollbarHandle = { bg = colors.color8 },
+    ScrollbarCursorHandle = { bg = colors.color12 },
   }
 end
 
