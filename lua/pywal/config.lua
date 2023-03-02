@@ -18,7 +18,7 @@ M.highlights_base = function (colors)
     PmenuSel = { fg = colors.transparent, bg = colors.color4 },
     WildMenu = { fg = colors.color7, bg = colors.color4 },
     CursorLineNr = { fg = colors.color1 },
-    Comment = { fg = colors.color10 },
+    Comment = { fg = colors.color10, bg = colors.background },
     Folded = { fg = colors.color4, bg = colors.transparent },
     FoldColumn = { fg = colors.color4, bg = colors.transparent },
     LineNr = { fg = colors.color12, bg = colors.transparent },
@@ -32,9 +32,10 @@ M.highlights_base = function (colors)
     Visual = { fg = colors.foreground, bg = colors.color1 },
     VisualNOS = { bg = colors.transparent },
     WarningMsg = { fg = colors.color3, bg = colors.transparent },
-    DiffAdd = { fg = colors.transparent, bg = colors.color4 },
-    DiffChange = { fg = colors.transparent, bg = colors.color5 },
-    DiffDelete = { fg = colors.transparent, bg = colors.color11 },
+    DiffAdd = { fg = colors.foreground, bg = colors.color2 },
+    DiffChange = { fg = colors.transparent, bg = colors.color0 },
+    DiffDelete = { fg = colors.foreground, bg = colors.color1 },
+    DiffText = { fg = colors.foreground, bg = colors.color1 },
     QuickFixLine = { bg = colors.color2 },
     PmenuSbar = { bg = colors.transparent },
     PmenuThumb = { bg = colors.color2 },
@@ -56,23 +57,23 @@ M.highlights_base = function (colors)
     Question = { fg = colors.color5 },
     EndOfBuffer = { fg = colors.background, bg = colors.transparent },
     NonText = { fg = colors.background, bg = colors.background },
-    Variable = { fg = colors.color5 },
-    String = { fg = colors.color12 },
+    Variable = { fg = colors.color9 },
+    String = { fg = colors.color6 },
     Character = { fg = colors.color12 },
-    Constant = { fg = colors.color5 },
+    Constant = { fg = colors.color9 },
     Number = { fg = colors.color5 },
     Boolean = { fg = colors.color5 },
     Float = { fg = colors.color5 },
     Identifier = { fg = colors.color5 },
-    Function = { fg = colors.color6 },
+    Function = { fg = colors.color3 },
     Operator = { fg = colors.color6 },
     Type = { fg = colors.color5 },
     StorageClass = { fg = colors.color7 },
     Structure = { fg = colors.color6 },
     Typedef = { fg = colors.color6 },
-    Keyword = { fg = colors.color6 },
+    Keyword = { fg = colors.color4 },
     Statement = { fg = colors.color6 },
-    Conditional = { fg = colors.color6 },
+    Conditional = { fg = colors.color2 },
     Repeat = { fg = colors.color6 },
     Label = { fg = colors.color4 },
     Exception = { fg = colors.color6 },
@@ -175,11 +176,11 @@ M.highlights_base = function (colors)
     illuminatedCurWord = { bg = colors.foreground },
 
     -- diff
-    diffAdded = { fg = colors.color4 },
-    diffRemoved = { fg = colors.color11 },
-    diffChanged = { fg = colors.color5 },
+    diffAdded = { fg = colors.color2 },
+    diffRemoved = { fg = colors.color1 },
+    diffChanged = { fg = colors.color3 },
     diffOldFile = { fg = colors.color5 },
-    diffNewFile = { fg = colors.color5 },
+    diffNewFile = { fg = colors.color6 },
     diffFile = { fg = colors.color7 },
     diffLine = { fg = colors.color1 },
     diffIndexLine = { fg = colors.color6 },
@@ -199,9 +200,9 @@ M.highlights_base = function (colors)
     GitGutterDelete = { fg = colors.color11 }, -- diff mode: Deleted line |diff.txt|
 
     -- GitSigns
-    GitSignsAdd = { fg = colors.color4 }, -- diff mode: Added line |diff.txt|
-    GitSignsChange = { fg = colors.color5 }, -- diff mode: Changed line |diff.txt|
-    GitSignsDelete = { fg = colors.color11 }, -- diff mode: Deleted line |diff.txt|
+    GitSignsAdd = { fg = colors.color2 }, -- diff mode: Added line |diff.txt|
+    GitSignsChange = { fg = colors.color3 }, -- diff mode: Changed line |diff.txt|
+    GitSignsDelete = { fg = colors.color1 }, -- diff mode: Deleted line |diff.txt|
     GitSignsCurrentLineBlame = { fg = colors.color11, bg = colors.background },
 
     -- Telescope
