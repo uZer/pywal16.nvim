@@ -1,10 +1,10 @@
 local M = {}
 
-M.highlights_base = function (colors)
+M.highlights_base = function(colors)
   return {
     Normal = { fg = colors.foreground, bg = colors.transparent },
-    StatusLineNC = { fg = colors.transparent, bg = colors.transparent },
-    StatusLine = { fg = colors.transparent, bg = colors.transparent },
+    -- StatusLineNC = { fg = colors.transparent, bg = colors.transparent },
+    -- StatusLine = { fg = colors.transparent, bg = colors.transparent },
     SignColumn = { fg = colors.transparent, bg = colors.transparent },
     MsgArea = { fg = colors.foreground, bg = colors.transparent },
     ModeMsg = { fg = colors.foreground, bg = colors.transparent },
@@ -28,7 +28,7 @@ M.highlights_base = function (colors)
     CursorLine = { bg = colors.transparent },
     CursorColumn = { bg = colors.transparent },
     ColorColumn = { bg = colors.background },
-    NormalFloat = { fg = colors.foreground,  bg = colors.background },
+    NormalFloat = { fg = colors.foreground, bg = colors.background },
     Visual = { fg = colors.foreground, bg = colors.color5 },
     VisualNOS = { bg = colors.transparent },
     WarningMsg = { fg = colors.color3, bg = colors.transparent },
@@ -132,23 +132,23 @@ M.highlights_base = function (colors)
     -- TSFuncBuiltin       = { };    -- For builtin functions: `table.insert` in Lua.
     -- TSFuncMacro         = { };    -- For macro defined fuctions (calls and definitions): each `macro_rules` in Rust.
     -- TSInclude           = { };    -- For includes: `#include` in C, `use` or `extern crate` in Rust, or `require` in Lua.
-    TSKeyword = { fg = colors.color6 }, -- For keywords that don't fall in previous categories.
+    TSKeyword = { fg = colors.color6 },         -- For keywords that don't fall in previous categories.
     TSKeywordFunction = { fg = colors.color6 }, -- For keywords used to define a fuction.
-    TSLabel = { fg = colors.color7 }, -- For labels: `label:` in C and `:label:` in Lua.
+    TSLabel = { fg = colors.color7 },           -- For labels: `label:` in C and `:label:` in Lua.
     -- TSMethod            = { };    -- For method calls and definitions.
     -- TSNamespace         = { };    -- For identifiers referring to modules and namespaces.
     -- TSNone              = { };    -- TODO: docs
     -- TSNumber            = { };    -- For all numbers
-    TSOperator = { fg = colors.color7 }, -- For any operator: `+`, but also `->` and `*` in C.
-    TSParameter = { fg = colors.color5 }, -- For parameters of a function.
+    TSOperator = { fg = colors.color7 },         -- For any operator: `+`, but also `->` and `*` in C.
+    TSParameter = { fg = colors.color5 },        -- For parameters of a function.
     -- TSParameterReference= { };    -- For references to parameters of a function.
-    TSProperty = { fg = colors.color4 }, -- Same as `TSField`.
-    TSPunctDelimiter = { fg = colors.color7 }, -- For delimiters ie: `.`
+    TSProperty = { fg = colors.color4 },         -- Same as `TSField`.
+    TSPunctDelimiter = { fg = colors.color7 },   -- For delimiters ie: `.`
     TSPunctBracket = { fg = colors.foreground }, -- For brackets and parens.
-    TSPunctSpecial = { fg = colors.color7 }, -- For special punctutation that does not fall in the catagories before.
+    TSPunctSpecial = { fg = colors.color7 },     -- For special punctutation that does not fall in the catagories before.
     -- TSRepeat            = { };    -- For keywords related to loops.
     -- TSString            = { };    -- For strings.
-    TSStringRegex = { fg = colors.color7 }, -- For regexes.
+    TSStringRegex = { fg = colors.color7 },  -- For regexes.
     TSStringEscape = { fg = colors.color6 }, -- For escape characters within a string.
     -- TSSymbol            = { };    -- For identifiers referring to symbols or atoms.
     -- TSType              = { };    -- For types.
@@ -185,7 +185,7 @@ M.highlights_base = function (colors)
     diffLine = { fg = colors.color1 },
     diffIndexLine = { fg = colors.color6 },
 
-   -- Neogit
+    -- Neogit
     NeogitBranch = { fg = colors.color6 },
     NeogitRemote = { fg = colors.color6 },
     NeogitHunkHeader = { bg = colors.transparent, fg = colors.foreground },
@@ -195,12 +195,12 @@ M.highlights_base = function (colors)
     NeogitDiffAddHighlight = { fg = colors.color4, bg = colors.color4 },
 
     -- GitGutter
-    GitGutterAdd = { fg = colors.color4 }, -- diff mode: Added line |diff.txt|
-    GitGutterChange = { fg = colors.color5 }, -- diff mode: Changed line |diff.txt|
+    GitGutterAdd = { fg = colors.color4 },     -- diff mode: Added line |diff.txt|
+    GitGutterChange = { fg = colors.color5 },  -- diff mode: Changed line |diff.txt|
     GitGutterDelete = { fg = colors.color11 }, -- diff mode: Deleted line |diff.txt|
 
     -- GitSigns
-    GitSignsAdd = { fg = colors.color2 }, -- diff mode: Added line |diff.txt|
+    GitSignsAdd = { fg = colors.color2 },    -- diff mode: Added line |diff.txt|
     GitSignsChange = { fg = colors.color3 }, -- diff mode: Changed line |diff.txt|
     GitSignsDelete = { fg = colors.color1 }, -- diff mode: Deleted line |diff.txt|
     GitSignsCurrentLineBlame = { fg = colors.color11, bg = colors.background },
