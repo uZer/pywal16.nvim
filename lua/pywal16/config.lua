@@ -3,8 +3,8 @@ local M = {}
 M.highlights_base = function(colors)
   return {
     Normal = { fg = colors.foreground, bg = colors.transparent },
-    -- StatusLineNC = { fg = colors.transparent, bg = colors.transparent },
-    -- StatusLine = { fg = colors.transparent, bg = colors.transparent },
+    StatusLineNC = { fg = colors.transparent, bg = colors.transparent },
+    StatusLine = { fg = colors.transparent, bg = colors.transparent },
     SignColumn = { fg = colors.transparent, bg = colors.transparent },
     MsgArea = { fg = colors.foreground, bg = colors.transparent },
     ModeMsg = { fg = colors.foreground, bg = colors.transparent },
@@ -211,12 +211,9 @@ M.highlights_base = function(colors)
     TelescopeSelection = { fg = colors.transparent, bg = colors.color2 },
 
     -- Indent Blank Line
-    IndentBlanklineChar = { fg = colors.color0, bg = colors.transparent },
-    IndentBlanklineSpaceChar = { fg = colors.color0, bg = colors.transparent },
-    IndentBlanklineSpaceCharBlankLine = { fg = colors.color0, bg = colors.transparent },
-    -- IndentBlanklineContextChar = { fg = colors.color4, bg = colors.transparent },
-    -- IndentBlanklineContextSpaceChar = { fg = colors.color4, bg = colors.transparent },
-    -- IndentBlanklineContextStart = { fg = colors.color4, bg = colors.transparent },
+    IblIndent = { fg = colors.color1, bg = colors.transparent },
+    IblScope = { fg = colors.color1, bg = colors.transparent },
+    IblWhitespace = { fg = colors.color1, bg = colors.transparent },
 
     -- NvimTree
     NvimTreeNormal = { fg = colors.foreground, bg = colors.transparent },
