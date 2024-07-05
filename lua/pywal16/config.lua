@@ -23,7 +23,7 @@ M.highlights_base = function(colors)
     FoldColumn = { fg = colors.color4, bg = colors.transparent },
     LineNr = { fg = colors.color12, bg = colors.transparent },
     FloatBorder = { fg = colors.foreground, bg = colors.transparent },
-    Whitespace = { fg = colors.color1, bg = colors.color2 },
+    Whitespace = { fg = colors.color1, bg = colors.color9 },
     VertSplit = { fg = colors.color4, bg = colors.transparent },
     CursorLine = { bg = colors.transparent },
     CursorColumn = { bg = colors.transparent },
@@ -203,7 +203,7 @@ M.highlights_base = function(colors)
     GitSignsAdd = { fg = colors.color2 },    -- diff mode: Added line |diff.txt|
     GitSignsChange = { fg = colors.color3 }, -- diff mode: Changed line |diff.txt|
     GitSignsDelete = { fg = colors.color1 }, -- diff mode: Deleted line |diff.txt|
-    GitSignsCurrentLineBlame = { fg = colors.color11, bg = colors.background },
+    GitSignsCurrentLineBlame = { fg = colors.color8, bg = colors.transparent },
 
     -- Telescope
     TelescopeBorder = { fg = colors.color5, bg = colors.transparent },
@@ -211,8 +211,8 @@ M.highlights_base = function(colors)
     TelescopeSelection = { fg = colors.transparent, bg = colors.color2 },
 
     -- Indent Blank Line
-    IblIndent = { fg = colors.color1, bg = colors.transparent },
-    IblScope = { fg = colors.color1, bg = colors.transparent },
+    IblIndent = { fg = colors.color8, bg = colors.transparent },
+    IblScope = { fg = colors.color7, bg = colors.transparent },
     IblWhitespace = { fg = colors.color1, bg = colors.transparent },
 
     -- NvimTree
@@ -257,7 +257,7 @@ M.highlights_base = function(colors)
     BufferLineFill = { bg = colors.transparent },
 
     -- BetterWhitespace
-    ExtraWhitespace = { bg = colors.color9 },
+    ExtraWhitespace = { fg = colors.foreground, bg = colors.color9 },
 
     -- nvim-scrollbar
     ScrollbarHandle = { bg = colors.color2 },
