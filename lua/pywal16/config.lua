@@ -186,11 +186,10 @@ M.highlights_base = function(colors)
     diffIndexLine = { fg = colors.color6 },
 
     -- diagnostics
-    DiagnosticError = { fg = colors.color1 },
-    DiagnosticWarn = { fg = colors.color3 },
-    DiagnosticInfo = { fg = colors.color5 },
-    DiagnosticHint = { fg = colors.color4 },
-
+    DiagnosticError = { fg = colors.color9 },
+    DiagnosticWarn = { fg = colors.color11 },
+    DiagnosticInfo = { fg = colors.color13 },
+    DiagnosticHint = { fg = colors.color12 },
 
     -- Neogit
     NeogitBranch = { fg = colors.color6 },
