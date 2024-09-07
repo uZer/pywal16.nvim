@@ -188,8 +188,8 @@ M.highlights_base = function(colors)
     -- diagnostics
     DiagnosticError = { fg = colors.color9 },
     DiagnosticWarn = { fg = colors.color11 },
-    DiagnosticInfo = { fg = colors.color13 },
-    DiagnosticHint = { fg = colors.color12 },
+    DiagnosticHint = { fg = colors.color14 },
+    DiagnosticInfo = { fg = colors.color15 },
 
     -- Neogit
     NeogitBranch = { fg = colors.color6 },
