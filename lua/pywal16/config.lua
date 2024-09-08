@@ -8,7 +8,8 @@ M.highlights_base = function(colors)
     SignColumn = { fg = colors.transparent, bg = colors.transparent },
     MsgArea = { fg = colors.foreground, bg = colors.transparent },
     ModeMsg = { fg = colors.foreground, bg = colors.transparent },
-    MsgSeparator = { fg = colors.foreground, bg = colors.transparent },
+    MsgSeparator = { fg = colors.color8, bg = colors.transparent },
+    WinSeparator = { fg = colors.color8, bg = colors.transparent },
     SpellBad = { fg = colors.color2 },
     SpellCap = { fg = colors.color6 },
     SpellLocal = { fg = colors.color4 },
@@ -21,9 +22,9 @@ M.highlights_base = function(colors)
     Comment = { fg = colors.color10, bg = colors.background },
     Folded = { fg = colors.color4, bg = colors.transparent },
     FoldColumn = { fg = colors.color4, bg = colors.transparent },
-    LineNr = { fg = colors.color12, bg = colors.transparent },
+    LineNr = { fg = colors.color8, bg = colors.transparent },
     FloatBorder = { fg = colors.foreground, bg = colors.transparent },
-    Whitespace = { fg = colors.color1, bg = colors.color9 },
+    Whitespace = { fg = colors.color8, bg = colors.background },
     VertSplit = { fg = colors.color4, bg = colors.transparent },
     CursorLine = { bg = colors.transparent },
     CursorColumn = { bg = colors.transparent },
@@ -91,9 +92,6 @@ M.highlights_base = function(colors)
     Ignore = { fg = colors.color7, bg = colors.transparent },
     Todo = { fg = colors.color11, bg = colors.transparent },
     Error = { fg = colors.color11, bg = colors.transparent },
-    -- TabLine = { fg = colors.color4, bg = colors.background },
-    -- TabLineSel = { fg = colors.foreground, bg = colors.background },
-    TabLineFill = { fg = colors.color4, bg = colors.transparent },
     CmpDocumentationBorder = { fg = colors.foreground, bg = colors.transparent },
     CmpItemAbbr = { fg = colors.foreground, bg = colors.transparent },
     CmpItemAbbrDeprecated = { fg = colors.color2, bg = colors.transparent },
@@ -219,7 +217,7 @@ M.highlights_base = function(colors)
     -- Indent Blank Line
     IblIndent = { fg = colors.color8, bg = colors.transparent },
     IblScope = { fg = colors.color7, bg = colors.transparent },
-    IblWhitespace = { fg = colors.color1, bg = colors.transparent },
+    IblWhitespace = { fg = colors.color8, bg = colors.background },
 
     -- NvimTree
     NvimTreeNormal = { fg = colors.foreground, bg = colors.transparent },
@@ -263,7 +261,7 @@ M.highlights_base = function(colors)
     BufferLineFill = { bg = colors.transparent },
 
     -- BetterWhitespace
-    ExtraWhitespace = { fg = colors.foreground, bg = colors.color9 },
+    ExtraWhitespace = { fg = colors.color8, bg = colors.background },
 
     -- nvim-scrollbar
     ScrollbarHandle = { bg = colors.color2 },
