@@ -19,7 +19,7 @@ M.highlights_base = function(colors)
     PmenuSel = { fg = colors.transparent, bg = colors.color0 },
     WildMenu = { fg = colors.color7, bg = colors.color4 },
     CursorLineNr = { fg = colors.color1 },
-    Comment = { fg = colors.color10, bg = colors.background },
+    Comment = { fg = colors.color8 },
     Folded = { fg = colors.color4, bg = colors.transparent },
     FoldColumn = { fg = colors.color4, bg = colors.transparent },
     LineNr = { fg = colors.color8, bg = colors.transparent },
@@ -57,7 +57,7 @@ M.highlights_base = function(colors)
     MoreMsg = { fg = colors.color5 },
     Question = { fg = colors.color5 },
     EndOfBuffer = { fg = colors.background, bg = colors.transparent },
-    NonText = { fg = colors.background, bg = colors.background },
+    NonText = { fg = colors.background },
     Variable = { fg = colors.color9 },
     String = { fg = colors.color6 },
     Character = { fg = colors.color12 },
@@ -217,7 +217,7 @@ M.highlights_base = function(colors)
     -- Indent Blank Line
     IblIndent = { fg = colors.color8, bg = colors.transparent },
     IblScope = { fg = colors.color7, bg = colors.transparent },
-    IblWhitespace = { fg = colors.color8, bg = colors.background },
+    -- IblWhitespace = { fg = colors.color8, bg = colors.background },
 
     -- NvimTree
     NvimTreeNormal = { fg = colors.foreground, bg = colors.transparent },
