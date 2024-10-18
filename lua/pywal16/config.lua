@@ -99,6 +99,8 @@ M.highlights_base = function(colors)
     CmpItemAbbrMatchFuzzy = { fg = colors.color7, bg = colors.transparent },
     CmpItemKind = { fg = colors.color4, bg = colors.transparent },
     CmpItemMenu = { fg = colors.color2, bg = colors.transparent },
+    WinBarNC = { bg = colors.transparent },
+    WinBar = { bg = colors.transparent },
 
     -- treesitter
 
