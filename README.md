@@ -8,6 +8,12 @@ It is made to work with [pywal16](https://github.com/eylles/pywal16),
 which is a fork of pywal generating/supporting 16 colors colorschemes (original
 pywal project only supports 9 colors).
 
+| pywal version | editor | colorscheme |
+| --------------|--------|------------ |
+| [pywal](https://github.com/dylanaraps/pywal) (archived) | vim | [pywal.vim](https://github.com/dylanaraps/wal.vim) (archived) |
+| [pywal](https://github.com/dylanaraps/pywal) (archived) | neovim | [pywal.nvim](https://github.com/AlphaTechnolog/pywal.nvim) (archived) |
+| [pywal16](https://github.com/eylles/pywal16) | neovim | [pywal16.nvim](https://github.com/uZer/pywal16.nvim) ◄ |
+
 This colorscheme is compatible with "classic" 16 colors palettes (solarized,
 molokai, base16, etc.), and has been made to preserve the "red", "green" and
 "yellow" implicit meanings. Please note that the presaved themes bundled in
@@ -23,29 +29,51 @@ lua like Telescope or NvimTree that aren't supported by default in wal.vim.
 This plugin takes advantage of termguicolors (which was unsupported by wal.vim)
 and won't use/declare any `ctermbg` or `ctermfg`.
 
+<!--toc:start-->
+- [pywal16.nvim](#pywal16nvim)
+  - [Screenshots](#screenshots)
+  - [Plugin Support](#plugin-support)
+  - [Installation](#installation)
+  - [Active theme](#active-theme)
+  - [Enable lualine theme](#enable-lualine-theme)
+  - [Enable the feline theme (untested with pywal16, I don't use feline)](#enable-the-feline-theme-untested-with-pywal16-i-dont-use-feline)
+  - [Using the core to get the colors](#using-the-core-to-get-the-colors)
+  - [How it works](#how-it-works)
+  - [Enjoy](#enjoy)
+  - [Hack](#hack)
+<!--toc:end-->
+
 ## Screenshots
 
+*using a [custom pywal16
+colorscheme](https://github.com/uZer/.minimics/blob/master/pywal16/colorschemes/dark/sw16-sixteal-soft-darker.json)
+with 16 different colors, preserving red, yellow and green for error, warn,
+etc.*
 ![01](./.screenshots/01.png)
+
+*using wallpaper generated themes*
 ![02](./.screenshots/02.png)
+![03](./.screenshots/03.png)
 
-## External Plugin Support
+## Plugin Support
 
+- NeoVim (checkhealth...)
 - BetterWhitespace
 - BufferLine
 - Coc
 - Diff
 - Feline
 - GitGutter
-- Gitsigns
-- Ident-BlankLine
+- GitSigns
+- Indent-BlankLine
 - Illuminate
 - LSP
-- LSP saga
-- LSP trouble
+- LspSaga
+- LspTrouble
 - Lualine
 - Neogit
-- NeoVim (checkhealth...)
 - NvimTree
+- nvim-navic
 - Nvim-scrollbar
 - Telescope
 - Tree-sitter
@@ -58,7 +86,19 @@ You can install this plugin with packer:
 use { 'uZer/pywal16.nvim', as = 'pywal16' }
 ```
 
-Or with vim-plug:
+With lazy:
+```lua
+{
+  'uZer/pywal16.nvim',
+  -- for local dev replace with:
+  -- dir = '~/your/path/pywal16.nvim',
+  config = function()
+    vim.cmd.colorscheme("pywal16")
+  end,
+}
+```
+
+With vim-plug:
 
 ```vim
 Plug 'uZer/pywal16.nvim', { 'as': 'pywal16' }
@@ -66,7 +106,7 @@ Plug 'uZer/pywal16.nvim', { 'as': 'pywal16' }
 
 ## Active theme
 
-To active the theme, call this in your neovim config:
+To enable the theme, call this in your neovim config:
 
 ```lua
 local pywal16 = require('pywal16')
@@ -82,7 +122,7 @@ colorscheme pywal16
 
 > It will set automatically the `vim.opt.termguicolors` to true
 
-## Activating lualine theme
+## Enable lualine theme
 
 Place this in your lualine config:
 
@@ -96,7 +136,7 @@ lualine.setup {
 }
 ```
 
-## Activating the feline theme (untested with pywal16)
+## Enable the feline theme (untested with pywal16, I don't use feline)
 
 You can put this to your config to activate the feline config:
 
@@ -167,3 +207,10 @@ create a theme based in it's colors
 ## Enjoy
 
 If you like this work you can give it a star :)
+
+## Hack
+
+Feel free to modify anything you want in this theme on your own fork, or to open
+PR if you want to add and/or change some features on this one. I changed most of
+the initial colors, added some plugin support and highlights, but mostly didn't
+touch the original files.
