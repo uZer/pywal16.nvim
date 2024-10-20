@@ -39,8 +39,9 @@ and won't use/declare any `ctermbg` or `ctermfg`.
   - [Enable the feline theme (untested with pywal16, I don't use feline)](#enable-the-feline-theme-untested-with-pywal16-i-dont-use-feline)
   - [Using the core to get the colors](#using-the-core-to-get-the-colors)
   - [How it works](#how-it-works)
+  - [Hack me](#hack-me)
+  - [Thanks](#thanks)
   - [Enjoy](#enjoy)
-  - [Hack](#hack)
 <!--toc:end-->
 
 ## Screenshots
@@ -204,13 +205,23 @@ let color15 = "#e3cfe2"
 The theme only reads it files variables and then create a colors dictionary to
 create a theme based in it's colors
 
-## Enjoy
-
-If you like this work you can give it a star :)
-
-## Hack
+## Hack me
 
 Feel free to modify anything you want in this theme on your own fork, or to open
 PR if you want to add and/or change some features on this one. I changed most of
 the initial colors, added some plugin support and highlights, but mostly didn't
 touch the original files.
+
+## Thanks
+
+[dylanaraps](https://github.com/dylanaraps) (pywal)
+
+[eylles](https://github.com/eylles) (pywal16)
+
+[AlphaTechnolog](https://github.com/AlphaTechnolog) (original pywal.nvim)
+
+Contributors
+
+## Enjoy
+
+If you like this work you can give it a star :)
