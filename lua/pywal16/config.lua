@@ -186,10 +186,15 @@ M.highlights_base = function(colors)
     diffRemoved = { fg = colors.color1 },
 
     -- diagnostics
-    DiagnosticError = { fg = colors.color9 },
-    DiagnosticHint = { fg = colors.color14 },
-    DiagnosticInfo = { fg = colors.color15 },
-    DiagnosticWarn = { fg = colors.color11 },
+    DiagnosticError = { fg = colors.color9  },
+    DiagnosticHint  = { fg = colors.color14 },
+    DiagnosticInfo  = { fg = colors.color15 },
+    DiagnosticWarn  = { fg = colors.color11 },
+
+    DiagnosticUnderlineError = { undercurl = true, fg = colors.color9  },
+    DiagnosticUnderlineHint  = { undercurl = true, fg = colors.color14 },
+    DiagnosticUnderlineInfo  = { undercurl = true, fg = colors.color15 },
+    DiagnosticUnderlineWarn  = { undercurl = true, fg = colors.color11 },
 
     -- Neogit
     NeogitBranch = { fg = colors.color6 },
