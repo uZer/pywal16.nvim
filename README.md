@@ -10,9 +10,9 @@ pywal project only supports 9 colors).
 
 | pywal version | editor | colorscheme |
 | --------------|--------|------------ |
-| [pywal](https://github.com/dylanaraps/pywal) (archived) | vim | [pywal.vim](https://github.com/dylanaraps/wal.vim) (archived) |
-| [pywal](https://github.com/dylanaraps/pywal) (archived) | neovim | [pywal.nvim](https://github.com/AlphaTechnolog/pywal.nvim) (archived) |
-| [pywal16](https://github.com/eylles/pywal16) | neovim | [pywal16.nvim](https://github.com/uZer/pywal16.nvim) ◄ |
+| [dylanaraps/pywal](https://github.com/dylanaraps/pywal) (archived) | vim | [dylanaraps/wal.vim](https://github.com/dylanaraps/wal.vim) (archived) |
+| [dylanaraps/pywal](https://github.com/dylanaraps/pywal) (archived) | neovim | [AlphaTechnolog/pywal.nvim](https://github.com/AlphaTechnolog/pywal.nvim) (archived) |
+| [eylles/pywal16](https://github.com/eylles/pywal16) | neovim | [uZer/pywal16.nvim](https://github.com/uZer/pywal16.nvim) ◄ |
 
 This colorscheme is compatible with "classic" 16 colors palettes (solarized,
 molokai, base16, etc.), and has been made to preserve the "red", "green" and
