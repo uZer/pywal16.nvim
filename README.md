@@ -11,7 +11,7 @@ pywal project only supports 9 colors).
 | pywal version | editor | colorscheme |
 | --------------|--------|------------ |
 | [dylanaraps/pywal](https://github.com/dylanaraps/pywal) (archived) | vim | [dylanaraps/wal.vim](https://github.com/dylanaraps/wal.vim) (archived) |
-| [dylanaraps/pywal](https://github.com/dylanaraps/pywal) (archived) | neovim | [AlphaTechnolog/pywal.nvim](https://github.com/AlphaTechnolog/pywal.nvim) (archived) |
+| [dylanaraps/pywal](https://github.com/dylanaraps/pywal) (archived) | neovim | [AlphaTechnolog/pywal.nvim](https://github.com/AlphaTechnolog/pywal.nvim) (archived) <br> [oncomouse/Lushwal.nvim](https://github.com/oncomouse/lushwal.nvim) <br> [sonjiku/yawnc.nvim](https://github.com/sonjiku/yawnc.nvim) <br> [RedsXDD/neopywal.nvim](https://github.com/RedsXDD/neopywal.nvim) <br> ... |
 | [eylles/pywal16](https://github.com/eylles/pywal16) | vim | ? |
 | [eylles/pywal16](https://github.com/eylles/pywal16) | neovim | [uZer/pywal16.nvim](https://github.com/uZer/pywal16.nvim) ◄ (you are here!) |
 
