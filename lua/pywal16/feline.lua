@@ -365,7 +365,7 @@ components.active[3][1] = {
 
 components.active[3][2] = {
   provider = function()
-    if next(vim.lsp.buf_get_clients()) ~= nil then
+    if next(vim.lsp.get_clients()) ~= nil then
       return " "
     else
       return ""
