@@ -55,6 +55,7 @@ M.highlights_base = function(colors)
     Normal = { fg = colors.foreground, bg = colors.transparent },
     NormalFloat = { fg = colors.foreground, bg = colors.background },
     NormalNC = { fg = colors.foreground, bg = colors.transparent },
+    NotifyBackground = { bg = colors.background },
     Number = { fg = colors.color5 },
     Operator = { fg = colors.color6 },
     Pmenu = { fg = colors.foreground, bg = colors.transparent },
