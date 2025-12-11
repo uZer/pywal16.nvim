@@ -1,7 +1,7 @@
 local M = {}
 
 function M.get_colors()
-  local config_path_env = os.getenv("PYWAL16_OUT_DIR") .. "/colors-wal.vim"
+  local config_path_env = os.getenv("PYWAL_CACHE_DIR") .. "/colors-wal.vim"
   local config_path_def = os.getenv("HOME") .. ".cache/wal/colors-wal.vim"
 
   if vim.fn.filereadable(config_path_env) == 1 then
