@@ -73,7 +73,7 @@ M.highlights_base = function(colors)
     SpecialChar = { fg = colors.foreground },
     SpecialComment = { fg = colors.color2 },
     SpecialKey = { fg = colors.color4 },
-    SpellBad = { fg = colors.color2 },
+    SpellBad = { sp = colors.color1, undercurl = true },
     SpellCap = { fg = colors.color6 },
     SpellLocal = { fg = colors.color4 },
     SpellRare = { fg = colors.color6 },
