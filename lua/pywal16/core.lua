@@ -1,9 +1,9 @@
 local M = {}
 
 function M.get_colors()
-  local cache_dir = os.getenv("PYWAL_CACHE_DIR") or os.getenv("XDG_CACHE_HOME") or (os.getenv("HOME") .. "/.cache")
+  local cache_dir = os.getenv("XDG_CACHE_HOME") or (os.getenv("HOME") .. "/.cache")
   local colors_path = cache_dir .. "/wal/colors-wal.vim"
-  if vim.fn.filereadable(colors_path) == 1 then
+  if vim.fn.filereadable(os.getenv("PYWAL_CACHE_DIR")) or vim.fn.filereadable(colors_path) == 1 then
     vim.cmd("source " .. colors_path)
   else
     vim.notify("couldn't read wal colors, file does not exist." .. colors_path, vim.log.levels.WARN)
