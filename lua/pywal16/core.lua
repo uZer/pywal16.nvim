@@ -1,13 +1,42 @@
 local M = {}
 
 function M.get_colors()
-  local cache_dir = os.getenv("XDG_CACHE_HOME") or os.getenv("HOME") .. "/.cache"
-  local colors_path = (os.getenv("PYWAL_CACHE_DIR") and os.getenv("PYWAL_CACHE_DIR") .. "/colors-wal.vim") or (cache_dir .. "/wal/colors-wal.vim")
-  if vim.fn.filereadable(colors_path) == 1 then
-    vim.cmd("source " .. colors_path)
+  local colors_paths = {}
+
+  -- $PYWAL_CACHE_FILE
+  if os.getenv("PYWAL_CACHE_FILE") then
+    table.insert(colors_paths, os.getenv("PYWAL_CACHE_FILE"))
+  end
+
+  -- $PYWAL_CACHE_DIR/colors-wal.vim
+  if os.getenv("PYWAL_CACHE_DIR") then
+    table.insert(colors_paths, os.getenv("PYWAL_CACHE_DIR") .. "/colors-wal.vim")
+  end
+
+  -- $XDG_CACHE_HOME/wal/colors-wal.vim
+  if os.getenv("XDG_CACHE_HOME") then
+    table.insert(colors_paths, os.getenv("XDG_CACHE_HOME") .. "/wal/colors-wal.vim")
+  end
+
+  -- $HOME/.cache/wal/colors-wal.vim
+  if os.getenv("HOME") then
+    table.insert(colors_paths, os.getenv("HOME") .. "/.cache/wal/colors-wal.vim")
+  end
+
+  -- use first available path in the possible paths list
+  local colors_path = nil
+  for _, path in ipairs(colors_paths) do
+    if vim.fn.filereadable(path) == 1 then
+      colors_path = path
+      break
+    end
+  end
+
+  -- import pywal cache file
+  if colors_path then
+    vim.cmd("source " .. vim.fn.fnameescape(colors_path))
   else
-    vim.notify("couldn't read wal colors, file does not exist." .. colors_path, vim.log.levels.WARN)
-    return {}
+    vim.notify("couldn't read wal colors, file does not exist")
   end
 
   return {
