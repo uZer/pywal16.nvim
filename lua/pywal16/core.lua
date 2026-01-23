@@ -1,7 +1,7 @@
 local M = {}
 
 function M.get_colors()
-  local cache_dir = os.getenv("XDG_CACHE_HOME") or vim.fn.stdpath("cache")
+  local cache_dir = os.getenv("XDG_CACHE_HOME") or os.getenv("HOME") .. "/.cache"
   local colors_path = (os.getenv("PYWAL_CACHE_DIR") and os.getenv("PYWAL_CACHE_DIR") .. "/colors-wal.vim") or (cache_dir .. "/wal/colors-wal.vim")
   if vim.fn.filereadable(colors_path) == 1 then
     vim.cmd("source " .. colors_path)
