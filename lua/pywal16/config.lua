@@ -227,7 +227,7 @@ M.highlights_base = function(colors)
     NvimTreeGitDirty = { fg = colors.color1 },
     NvimTreeGitIgnored = { fg = colors.color8, dim = true },
     NvimTreeGitMerge = { fg = colors.color4 },
-    NvimTreeGitNew = { italic = true },
+    NvimTreeGitNew = { fg = colors.color1, italic = true },
     NvimTreeGitStaged = { fg = colors.color3 },
     NvimTreeImageFile = { fg = colors.color8, dim = true },
     NvimTreeIndentMarker = { fg = colors.foreground },
