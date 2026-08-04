@@ -1,6 +1,32 @@
 local M = {}
 
+-- Blend fg into bg (alpha 0 = bg, 1 = fg). Same idea as catppuccin's U.darken/lighten.
+local function blend(fg, alpha, bg)
+  local function channel(hex, i)
+    return tonumber(hex:sub(i, i + 1), 16)
+  end
+  local function mix(a, b)
+    return math.floor(alpha * a + (1 - alpha) * b + 0.5)
+  end
+  return string.format(
+    "#%02x%02x%02x",
+    mix(channel(fg, 2), channel(bg, 2)),
+    mix(channel(fg, 4), channel(bg, 4)),
+    mix(channel(fg, 6), channel(bg, 6))
+  )
+end
+
+local function is_light(hex)
+  local r = tonumber(hex:sub(2, 3), 16)
+  local g = tonumber(hex:sub(4, 5), 16)
+  local b = tonumber(hex:sub(6, 7), 16)
+  return (0.299 * r + 0.587 * g + 0.114 * b) / 255 > 0.5
+end
+
 M.highlights_base = function(colors)
+  -- Subtle chip: mix a bit of muted color into the background.
+  local inlay_bg = blend(colors.color8, is_light(colors.background) and 0.08 or 0.12, colors.background)
+
   return {
     Boolean = { fg = colors.color5 },
     Character = { fg = colors.color12 },
@@ -153,10 +179,13 @@ M.highlights_base = function(colors)
     IblScope = { fg = colors.color7, bg = colors.transparent },
     -- IblWhitespace = { fg = colors.color8, bg = colors.background },
 
+    -- LSP
+    LspCodeLens = { italic = true, fg = colors.color8 },
+    LspInlayHint = { italic = true, fg = colors.color8, bg = inlay_bg },
+
     -- LspSaga
     DefinitionCount = { fg = colors.color6 },
     DefinitionIcon = { fg = colors.color7 },
-    LspCodeLens = { italic = true, fg = colors.color8 },
     LspFloatWinBorder = { fg = colors.foreground },
     LspFloatWinNormal = { bg = colors.transparent },
     LspSagaBorderTitle = { fg = colors.color7 },
