@@ -276,6 +276,39 @@ M.highlights_base = function(colors)
     TelescopeNormal = { fg = colors.foreground, bg = colors.transparent },
     TelescopeSelection = { fg = colors.transparent, bg = colors.color2 },
 
+    -- Mini
+    MiniIconsAzure = { fg = colors.color12 },
+    MiniIconsBlue = { fg = colors.color4 },
+    MiniIconsCyan = { fg = colors.color6 },
+    MiniIconsGreen = { fg = colors.color2 },
+    MiniIconsGrey = { fg = colors.color8 },
+    MiniIconsOrange = { fg = colors.color3 },
+    MiniIconsPurple = { fg = colors.color5 },
+    MiniIconsRed = { fg = colors.color1 },
+    MiniIconsYellow = { fg = colors.color11 },
+
+    -- NeoTree
+    NeoTreeDirectoryIcon = { fg = colors.color4 },
+    NeoTreeFileIcon = { fg = colors.foreground },
+    NeoTreeFileName = { fg = colors.foreground },
+    NeoTreeFileNameOpened = { fg = colors.color7 },
+    NeoTreeRootName = { fg = colors.color4, bold = true },
+    NeoTreeIndentMarker = { fg = colors.color8 },
+    NeoTreeExpander = { fg = colors.color8 },
+    NeoTreeModified = { fg = colors.color3 },
+    NeoTreeGitAdded = { fg = colors.color2 },
+    NeoTreeGitConflict = { fg = colors.color11 },
+    NeoTreeGitDeleted = { fg = colors.color1 },
+    NeoTreeGitIgnored = { fg = colors.color8 },
+    NeoTreeGitModified = { fg = colors.color3 },
+    NeoTreeGitUnstaged = { fg = colors.color5 },
+    NeoTreeGitUntracked = { fg = colors.foreground },
+    NeoTreeGitStaged = { fg = colors.color5 },
+    NeoTreeDimText = { fg = colors.color8 },
+    NeoTreeNormal = { fg = colors.foreground },
+    NeoTreeNormalNC = { fg = colors.foreground },
+    NeoTreeSignColumn = { fg = colors.foreground },
+
     -- treesitter
     -- These groups are for the neovim tree-sitter highlights.
     -- As of writing, tree-sitter support is a WIP, group names may color5.
