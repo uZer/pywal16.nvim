@@ -1,4 +1,8 @@
-local lsp = require("feline.providers.lsp")
+local ok, lsp = pcall(require, "feline.providers.lsp")
+if not ok then
+  return {}
+end
+
 local lsp_severity = vim.diagnostic.severity
 local b = vim.b
 
