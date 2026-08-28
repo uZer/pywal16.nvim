@@ -276,7 +276,9 @@ M.highlights_base = function(colors)
     TelescopeNormal = { fg = colors.foreground, bg = colors.transparent },
     TelescopeSelection = { fg = colors.transparent, bg = colors.color2 },
 
-    -- Mini
+    -- Mini.nvim
+    --
+    -- mini.icons
     MiniIconsAzure = { fg = colors.color12 },
     MiniIconsBlue = { fg = colors.color4 },
     MiniIconsCyan = { fg = colors.color6 },
@@ -286,6 +288,97 @@ M.highlights_base = function(colors)
     MiniIconsPurple = { fg = colors.color5 },
     MiniIconsRed = { fg = colors.color1 },
     MiniIconsYellow = { fg = colors.color11 },
+
+    -- mini.statusline
+    MiniStatuslineModeNormal = {
+      fg = is_light(colors.color4) and colors.background or colors.foreground,
+      bg = colors.color4,
+      bold = true,
+    },
+    MiniStatuslineModeInsert = {
+      fg = is_light(colors.color2) and colors.background or colors.foreground,
+      bg = colors.color2,
+      bold = true,
+    },
+    MiniStatuslineModeVisual = {
+      fg = is_light(colors.color5) and colors.background or colors.foreground,
+      bg = colors.color5,
+      bold = true,
+    },
+    MiniStatuslineModeReplace = {
+      fg = is_light(colors.color1) and colors.background or colors.foreground,
+      bg = colors.color1,
+      bold = true,
+    },
+    MiniStatuslineModeCommand = {
+      fg = is_light(colors.color3) and colors.background or colors.foreground,
+      bg = colors.color3,
+      bold = true,
+    },
+    MiniStatuslineModeOther = {
+      fg = is_light(colors.color8) and colors.background or colors.foreground,
+      bg = colors.color8,
+      bold = true,
+    },
+    MiniStatuslineDevinfo = {
+      fg = colors.color8,
+      bg = colors.transparent,
+    },
+    MiniStatuslineFilename = {
+      fg = colors.foreground,
+      bg = colors.transparent,
+    },
+    MiniStatuslineFileinfo = {
+      fg = colors.color8,
+      bg = colors.transparent,
+    },
+    MiniStatuslineInactive = {
+      fg = colors.color8,
+      bg = colors.transparent,
+    },
+
+    -- mini.statuscolumn
+    MiniStatuscolumnDim = {
+      fg = colors.color8,
+      bg = colors.transparent,
+    },
+    MiniStatuscolumnDimCursor = {
+      fg = colors.color4,
+      bg = colors.transparent,
+    },
+    MiniStatuscolumnSep = {
+      fg = colors.color8,
+      bg = colors.transparent,
+    },
+    MiniStatuscolumnSepCursor = {
+      fg = colors.color4,
+      bg = colors.transparent,
+    },
+
+    -- mini.completion
+    MiniCompletionActiveParameter = {
+      fg = colors.color4,
+      bold = true,
+      underline = true,
+    },
+    MiniCompletionDeprecated = {
+      fg = colors.color8,
+      strikethrough = true,
+    },
+    MiniCompletionInfoBorderOutdated = {
+      fg = colors.color11,
+      bg = colors.transparent,
+    },
+
+    -- mini.indentscope
+    MiniIndentscopeSymbol = {
+      fg = colors.color4,
+      bg = colors.transparent,
+    },
+    MiniIndentscopeSymbolOff = {
+      fg = colors.color8,
+      bg = colors.transparent,
+    },
 
     -- NeoTree
     NeoTreeDirectoryIcon = { fg = colors.color4 },
