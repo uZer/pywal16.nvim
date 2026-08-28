@@ -40,7 +40,6 @@ and won't use/declare any `ctermbg` or `ctermfg`.
   - [Installation](#installation)
   - [Active theme](#active-theme)
   - [Enable lualine theme](#enable-lualine-theme)
-  - [Enable the feline theme (untested with pywal16, I don't use feline)](#enable-the-feline-theme-untested-with-pywal16-i-dont-use-feline)
   - [Using the core to get the colors](#using-the-core-to-get-the-colors)
   - [How it works](#how-it-works)
   - [Hack me](#hack-me)
@@ -67,7 +66,6 @@ etc.*
 - BufferLine
 - Coc
 - Diff
-- Feline
 - GitGutter
 - GitSigns
 - Indent-BlankLine
@@ -144,33 +142,6 @@ lualine.setup {
   },
 }
 ```
-
-## Enable the feline theme
-
-_note: this part comes from AlphaTechnolog project I forked, I don't use feline
-so I never tested this part of the theme_
-
-You can put this to your config to activate the feline config:
-
-```lua
-local present, feline = pcall(require, 'feline')
-
-if not present then
-  return
-end
-
-local present, pywal16_feline = pcall(require, 'pywal16.feline')
-
-if not present then
-  return
-end
-
-feline.setup({
-  components = pywal16_feline,
-})
-```
-
-Then you should see the feline bar working successfully.
 
 ## Using the core to get the colors
 
